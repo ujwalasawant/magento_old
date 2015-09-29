@@ -1,0 +1,21 @@
+<?xml version="1.0">
+<config>
+    <modules>
+        <MyModule>
+            <version>1.0.0</version>
+        </MyModule>
+    </modules>
+
+        <frontend>
+            <routers>
+                <routeurfrontend>
+                    <use>standard</use>
+                    <args>
+                        <module>MyModule</module>
+                        <frontName>ujwala</frontName>
+                    </args>
+                </routeurfrontend>
+            </routers>
+        </frontend>
+
+</config>

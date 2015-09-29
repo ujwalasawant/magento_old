@@ -1,0 +1,55 @@
+<?xml version='1.0' ?>
+
+<config>
+    <modules>
+        <Arty_Demo>
+            <version>1.0.0</version>
+        </Arty_Demo>
+    </modules>
+    <frontend>
+        <routers>
+            <demo>
+                <use>standard</use>
+                <args>
+                    <module>Arty_Demo</module>
+                    <frontName>demo</frontName>
+                </args>
+            </demo>
+        </routers>
+        <layout>
+            <updates>
+                <demo>
+                    <file>demo.xml</file>
+                </demo>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <blocks>
+       <rewrite>
+					<product_list>Arty_Demo_Block</product_list>
+        </rewrite>
+        </blocks>
+        <model>
+            <demo>
+                <class>Arty_Demo_Model</class>
+                <resourceModel>demo_mysql4</resourceModel>
+            </demo>
+            <demo_mysql4>
+                <class>Arty_Demo_Model_Mysql4</class>
+                <entities>
+                    <demo>
+                        <table>demo</table>
+                    </demo>
+                </entities>
+            </demo_mysql4>
+        </model>
+<resources>
+    <demo_write>
+        <connection>
+            <use>core_write</use>
+        </connection>
+    </demo_write>
+</resources>
+    </global>
+</config>
