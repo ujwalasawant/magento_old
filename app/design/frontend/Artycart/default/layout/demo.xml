@@ -1,0 +1,12 @@
+<layout version="0.1.0">
+    <default>
+        <reference name="content">
+        </reference>
+    </default>
+    <demo_index_index>
+        <reference name="content">
+            <block type="demo/demoblock"  name="snow_demoblock"
+                   template="demo/snow.phtml" />
+        </reference>
+    </demo_index_index>
+</layout>

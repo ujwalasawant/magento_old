@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+<Artist_adminhtml_Artist_index>
+<reference name="content">
+<block type="Artist/adminhtml_Artist" name="Artist" />
+</reference>
+</Artist_adminhtml_Artist_index>
+</layout>
