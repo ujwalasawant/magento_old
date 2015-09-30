@@ -1,0 +1,485 @@
+@import "stylesheets/bootstrap";
+/* TopBar */
+#topbar {
+
+  color: #A92000;
+  font-size: 12px;
+  padding: 10px 0 0;
+  border-bottom: 3px solid #FA9221;
+}
+#topbar ul {
+  margin: 5px 0 0;
+}
+a {
+  color: #A92000;
+  font-size: 15px;
+}
+#topbar a:hover {
+  color: #A92000;
+}
+#topbar .user-links .welcome {
+  padding: 10px;
+}
+#topbar .user-links ul {
+  background: none repeat scroll 0 0 #FA9221;
+  margin: 0;
+  padding: 10px;
+}
+
+#topbar .user-links a {
+  color: Red;
+}
+.float {
+  float: left;
+}
+/* Navbar */
+.navbar {
+  border: 0 none;
+  border-radius: 0;
+  margin: 0;
+  border-bottom: 3px solid #E7E7E7;
+}
+.navbar .navbar-form {
+  padding-right: 10px;
+}
+.navbar-nav {
+}
+.navbar-default .navbar-nav > li:hover > a {
+  background: #fff;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.176);
+}
+.navbar ul.level0, .navbar ul.level1 {
+  display: none;
+  text-align: left;
+}
+.navbar .dropdown-menu {
+  border: 0;
+}
+.navbar ul.level1 {
+  left: 150px;
+  top: 0;
+}
+.navbar-nav > li {
+  display: inline-block;
+}
+
+.footer ul li {
+  list-style-type: none;
+}
+.vcenter {
+  display: inline-block;
+  vertical-align: bottom;
+  float: none;
+}
+.searchbox {
+  height: 3em;
+}
+.searchimg {
+  background: none;
+}
+.cartbox {
+  height: 3em;
+}
+
+.logobox {
+  height: 7em;
+}
+.searchtextbox {
+  padding: 3px;
+  font-size: 16px;
+  border-style: solid;
+  border-width: 0px;
+  height:35px;
+  width:370px;
+  border-radius: 7px;
+  color:#CCCCCC;
+
+  box-shadow: inset 0px 0px 8px 0px #cccccc;
+  border-color: #cccccc;
+}
+.searchtextbox:focus {
+  outline: none;
+}
+.smallheader
+{
+  margin-top: 2em;
+}
+
+/* homepg prod css */
+.OuterDiv {
+  width: 100%;
+  height: 50%;
+
+}
+
+.holder {
+  width: 45%;
+  height: 45%;
+  display: inline-block;
+  border: 1px solid red;
+  margin: 10px;
+}
+
+.holderright {
+  width: 45%;
+  height: 50%;
+  min-height: 500px;
+  float: left;
+  border: 1px solid red;
+  margin: 10px;
+}
+
+.gray{
+ height:100%;
+}
+
+.holderleft {
+
+  height: 100%;
+
+  float: left;
+  border: 1px solid ;
+
+}
+
+.width30 {
+  width: 30%;
+  height: auto;
+}
+
+.width50 {
+  width: 90%;
+  height: 90%;
+}
+
+.width25 {
+  width: 25%;
+  height: 25%;
+}
+
+.product-image-LeftBlock {
+  height: 100%;
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1070px) {
+  .OuterDiv {
+    width: 90%;
+  }
+
+  .holder {
+    float: left;
+    width: 45%;
+  }
+
+  .holderleft {
+    float: left;
+    width: 100%;
+    min-width: 200px;
+  }
+
+  .holderright {
+    float: left;
+    width: 100%;
+    border: solid;
+    min-width: 200px;
+  }
+
+  .width50 {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .OuterDiv {
+    width: 90%;
+  }
+
+  .holder {
+    float: left;
+    width: 90%;
+    margin: 0 10px;
+  }
+
+  .holderleft {
+    float: left;
+    width: 100%;
+    min-width: 500px;
+  }
+
+  .holderright {
+    float: left;
+    background-color: aqua;
+    width: 100%;
+    min-width: 400px;
+  }
+
+  .width50 {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 600px) {
+  .OuterDiv {
+    width: 90%;
+  }
+
+  .holder {
+    float: left;
+    min-width: 200px;
+    width: 80%;
+    margin: 0 10px;
+  }
+
+  .holderleft {
+    float: left;
+    width: 100%;
+    min-width: 400px;
+  }
+
+  .holderright {
+    float: left;
+    background-color: aqua;
+    width: 100%;
+    min-width: 400px;
+  }
+
+  .width50 {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .OuterDiv {
+    width: 90%;
+    padding: 0 10px;
+  }
+
+  .holder {
+    float: left;
+    min-width: 280px;
+    width: 90%;
+    align-content: center;
+    margin: auto auto;
+  }
+
+  .holderleft {
+    float: left;
+    width: 100%;
+    min-width: 400px;
+  }
+
+  .holderright {
+    float: left;
+    min-width: 400px;
+    width: 100%;
+    border: solid;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .width50 {
+    min-width: 300px;
+  }
+}
+
+/* product widget list header */
+$red :#DF3D5C;
+$yellow: #F3961E;
+$purple: #A1438D;
+$gray: #5B5B5B;
+
+
+
+.subheader {
+  font-size: 4vmin;
+  color:$gray;
+  height: 60px;
+}
+.subheader a{
+  color: black;
+}
+
+.firstH{
+  @extend .subheader;
+  background-color: $red;
+}
+
+.secondH{
+  @extend .subheader;
+  background-color: $yellow;
+}
+
+.thirdH{
+  @extend .subheader;
+  background-color: $purple;
+}
+
+.fourthH{
+  @extend .subheader;
+  background-color: $red;
+}
+
+.fifthH{
+  @extend .subheader;
+  background-color: $yellow;
+}
+
+.sixthH{
+  @extend .subheader;
+  background-color: $gray;
+}
+
+.Hpadding{
+  padding: 0em 0em 0em 0em;
+  margin: 0em 0em 0em 0em;
+}
+
+.subcontent{
+  height:600px;
+}
+
+.sub-padding{
+  padding: 10px 0em 0em 0.5em;
+  margin: 0em 0em 0em 0em;
+}
+
+.subpadding
+{
+  padding: 10px 0em 0em 0em;
+  margin: 0em 0em 0em 0em;
+}
+
+._sub-padding{
+  padding: 10px 0em 0em 0em;
+  margin: 0em 0em 0em 0em;
+}
+
+._subpadding{
+  padding: 10px 0em 0em 0.5em;
+  margin: 0em 0em 0em 0em;
+}
+
+.Exclusivee {
+  background: #F3961E;
+  font-size: 4vmin;
+  font-color: #5B5B5B;
+  width: 100%;
+}
+
+.Exclusivee a {
+  color: black;
+}
+
+.ProductHeader {
+  background: #A1438D;
+  font-size: 4vmin;
+  font-color: #5B5B5B;
+  width: 100%;
+}
+.ProductHeader a {
+  color: white;
+}
+
+.ArtistHeader {
+  background: #DF3D5C;
+  font-size: 4vmin;
+  width: 100%;
+}
+.ArtistHeader a {
+  color: black;
+}
+
+.DesignerHeader {
+  background: #F3961E;
+  font-size: 4vmin;
+  width: 100%;
+}
+.DesignerHeader a {
+  color: white;
+}
+
+.TidingHeader {
+  background: #5B5B5B;
+  font-size: 4vmin;
+  width: 100%;
+}
+.TidingHeader a {
+  color: black;
+}
+
+.module, .Exclusivee, .ProductHeader, .ArtistHeader, .DesignerHeader, .TidingHeader, .exclusive .headercolor, .deals .headercolor {
+  height: 50px;
+  width: 100%;
+}
+
+.exclusive {
+  width: 100%;
+  height: 100%;
+}
+.exclusive .headercolor {
+  background: #F3961E;
+}
+
+.deals {
+  width: 100%;
+  height: 100%;
+}
+.deals .headercolor {
+  background: #DF3D5C;
+}
+
+.headercolor a {
+  font-size: 4vmin;
+  color: white;
+}
+
+.left {
+  width: 46%;
+  text-align: left;
+  float: left;
+  padding-left: 5%;
+}
+
+.right {
+  float: left;
+  width: 46%;
+  margin-left: 12px;
+  padding-right: 1%;
+  text-align: right;
+}
+
+@media only screen and (max-width: 580px) {
+  .left {
+    display: inline-block;
+    float: left;
+    width: 45%;
+    padding-right: 4%;
+  }
+
+  .right {
+    padding-left: 4%;
+    width: 45%;
+    float: left;
+  }
+}
+
+/* grid subcategory */
+.sneha {
+  -moz-column-count:5;
+  -webkit-column-count:5;
+  -moz-column-width: 10em;
+  -webkit-column-width: 10em;
+  -moz-column-gap: 10px;
+  -webkit-column-gap:10px;
+}
+
+.sneha .gridC > .col-lg-4 {
+
+  display: inline-block;
+  padding: 0;
+  margin: 10px;
+  width:  100%;
+  height:auto;
+  float:none;
+}
+
+.gridC .img-responsive {
+  border: 0px solid #999;
+}
