@@ -1,0 +1,55 @@
+<config>
+	  <modules>
+        <Inchoo_Tag>
+            <version>0.1.0</version>
+        </Inchoo_Tag>
+    </modules>
+	<global>
+		<blocks>
+			<adminhtml>
+				<rewrite>
+					<tag_edit>Inchoo_Tag_Block_Adminhtml_Tag_Edit</tag_edit>
+				</rewrite>
+			</adminhtml>
+			<tag>
+				<rewrite>
+					<product_list>Inchoo_Tag_Block_Product_List</product_list>
+				</rewrite>
+			</tag>
+		</blocks>
+		<models>
+			<tag>
+				<rewrite>
+					<!-- Model -->
+					<tag>Inchoo_Tag_Model_Tag</tag>
+				</rewrite>
+			</tag>
+			<tag_resource>
+				<rewrite>
+					<!-- Resource -->
+					<tag>Inchoo_Tag_Model_Resource_Tag</tag>
+					<!-- Collection -->
+					<tag_collection>Inchoo_Tag_Model_Resource_Tag_Collection</tag_collection>
+				</rewrite>
+			</tag_resource>
+		</models>
+		<helpers>
+			<tag>
+				<rewrite>
+					<data>Inchoo_Tag_Helper_Data</data>
+				</rewrite>
+			</tag>
+		</helpers>
+	</global>
+	<frontend>
+		<routers>
+			<tag>
+				<args>
+					<modules>
+						<inchoo_tag before="Mage_Tag">Inchoo_Tag</inchoo_tag>
+					</modules>
+				</args>
+			</tag>
+		</routers>
+	</frontend>
+</config>

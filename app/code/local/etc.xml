@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Catalog>
+            <active>true</active>
+            <codePool>Local</codePool>
+            <depends>
+                Mage_Catalog
+            </depends>
+        </Catalog>
+    </modules>
+</config>
