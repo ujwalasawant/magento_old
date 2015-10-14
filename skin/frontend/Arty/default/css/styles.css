@@ -7399,7 +7399,7 @@ a {
 
 .vcenter {
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: middle;
   float: none;
 }
 
@@ -7783,26 +7783,26 @@ a {
   }
 }
 /* grid subcategory */
-.sneha {
-  -moz-column-count: 5;
-  -webkit-column-count: 5;
-  -moz-column-width: 10em;
-  -webkit-column-width: 10em;
-  -moz-column-gap: 10px;
-  -webkit-column-gap: 10px;
+*, *:before, *:after {
+  box-sizing: border-box !important;
 }
 
-.sneha .gridC > .col-lg-4 {
+.rGrid {
+  -moz-column-width: 18em;
+  -webkit-column-width: 18em;
+  -moz-column-gap: 1em;
+  -webkit-column-gap: 1em;
+}
+
+.item {
   display: inline-block;
-  padding: 0;
-  margin: 10px;
+  padding: .25rem;
   width: 100%;
-  height: auto;
-  float: none;
 }
 
-.gridC .img-responsive {
-  border: 0px solid #999;
+.well {
+  position: relative;
+  display: block;
 }
 
 /** Category Page **/

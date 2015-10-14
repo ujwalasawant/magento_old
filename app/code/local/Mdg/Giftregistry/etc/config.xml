@@ -85,6 +85,17 @@
                 </args>
             </mdg_giftregistry>
         </routers>
+        <events>
+            <checkout_cart_save_before>
+                <observers>
+                    <mdg_giftregistry_observer>
+                        <type>singleton</type>
+                        <class>mdg_giftregistry/observer</class>
+                        <method>addShipping</method>
+                    </mdg_giftregistry_observer>
+                </observers>
+            </checkout_cart_save_before>
+        </events>
     </frontend>
     <admin>
         <routers>

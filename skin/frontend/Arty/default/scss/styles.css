@@ -5859,7 +5859,7 @@ a {
 
 .vcenter {
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: middle;
   float: none; }
 
 .searchbox {
@@ -6167,23 +6167,100 @@ a {
     width: 45%;
     float: left; } }
 /* grid subcategory */
-.sneha {
-  -moz-column-count: 5;
-  -webkit-column-count: 5;
-  -moz-column-width: 10em;
-  -webkit-column-width: 10em;
-  -moz-column-gap: 10px;
-  -webkit-column-gap: 10px; }
+*, *:before, *:after {
+  box-sizing: border-box !important; }
 
-.sneha .gridC > .col-lg-4 {
+.rGrid {
+  -moz-column-width: 18em;
+  -webkit-column-width: 18em;
+  -moz-column-gap: 1em;
+  -webkit-column-gap: 1em; }
+
+.item {
   display: inline-block;
-  padding: 0;
-  margin: 10px;
-  width: 100%;
-  height: auto;
-  float: none; }
+  padding: .25rem;
+  width: 100%; }
 
-.gridC .img-responsive {
-  border: 0px solid #999; }
+.well {
+  position: relative;
+  display: block; }
+
+/** Category Page **/
+.category-products {
+  width: 380px; }
+
+.product-img-box {
+  margin: 5px 25px 5px 25px;
+  border: none;
+  border-radius: 0px;
+  border: solid 1px #DDD;
+  height: auto; }
+
+.list-group-item:first-child {
+  border: none;
+  border-radius: 0px;
+  border-radius: 0px; }
+
+.product-description {
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.swatches {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.box-border {
+  border-radius: 0px;
+  padding: 0 0 0 0; }
+
+.row .swatches .col-xs-4 {
+  padding: 0; }
+
+.row .swatches .col-xs-4 a {
+  margin-bottom: 0; }
+
+.Hpadding {
+  padding: 0em 0em 0em 0em;
+  margin: 0em 0.1em 0em 0.1em; }
+
+.product-category-profile {
+  border: solid 1px #DDD;
+  height: 60px; }
+
+.product-owner {
+  margin-left: 1px;
+  margin-right: 1px; }
+
+.lightborder {
+  border: solid 1px #DDD; }
+
+.swatchesrow {
+  margin-left: 1px;
+  margin-right: 1px;
+  background: #ECECEC;
+  border-bottom: solid 1px #DDD;
+  height: 120px; }
+
+.pricerow {
+  margin-left: 1px;
+  margin-right: 1px;
+  background: #ECECEC; }
+
+.list-group-item {
+  border: solid black; }
+
+.subcategories li {
+  float: left;
+  display: block;
+  text-align: center;
+  margin: 10px; }
+
+.subcategories li span {
+  display: block;
+  margin: 8px 0; }
+
+/** End category Page **/
 
 /*# sourceMappingURL=styles.css.map */
