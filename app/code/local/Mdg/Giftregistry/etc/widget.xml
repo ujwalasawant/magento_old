@@ -28,6 +28,7 @@
                         <value>mdg/widget/Tiding.phtml</value>
                         <label>ArtyCart_Tiding</label>
                     </tidings_Grid>
+
                     <sub_catagory_Grid translate="label">
                         <value>mdg/widget/sub_catagory.phtml</value>
                         <label>ArtyCart_Subcatagory</label>

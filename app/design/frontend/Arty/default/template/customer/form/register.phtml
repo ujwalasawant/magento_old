@@ -54,6 +54,9 @@
                         <input type="text" name="email" id="email_address" value="<?php echo $this->escapeHtml($this->getFormData()->getEmail()) ?>" title="<?php echo $this->__('Email Address') ?>" class="input-text validate-email required-entry" />
                     </div>
                 </li>
+
+
+
                 <?php if ($this->isNewsletterEnabled()): ?>
                 <li class="control">
                     <div class="input-box">

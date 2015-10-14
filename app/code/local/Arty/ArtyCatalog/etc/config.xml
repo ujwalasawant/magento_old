@@ -12,7 +12,7 @@
 				<rewrite>
 					<product_list>Arty_ArtyCatalog_Block_Product_List</product_list>
 				</rewrite>
-			</tag>
+			</artycatalog>
 		</blocks>
 	</global>
 	 <frontend>
