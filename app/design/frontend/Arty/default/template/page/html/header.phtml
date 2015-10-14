@@ -38,19 +38,23 @@
 	  	  	       		 <ul class="list-inline float"> 
 	  	  	           	  	    	 <?php if ($this->helper('customer')->isLoggedIn()): ?>   
 	  	  	           	  	    	 	 <li>   
-	  	  	           	  	    	 	 	  <a title="<?php echo $this->__('My Account') ?>" href="<?php echo $this->getUrl('customer/account') ?>">   <?php echo $this->__('My Account') ?>     </a>   
+	  	  	           	  	    	 	 	  <a title="<?php echo $this->__('My Account') ?>" href="<?php echo Mage::getUrl('customer/account') ?>">   <?php echo $this->__('My Account') ?>     </a>
 	  	  	           	  	    	 	  </li>    
 	  	  	           	  	    	 	  <li>
-	  	  	           	  	    	 	  	     <a title="Log Out" href="<?php echo $this->getUrl('customer/ account/logout') ?>">     <?php echo $this->__('Logout') ?></a>  
+	  	  	           	  	    	 	  	     <a title="Log Out" href="<?php echo Mage::getUrl('customer/account/logout') ?>">     <?php echo $this->__('Logout') ?></a>
       									  </li> 
-         						 			<?php else: ?>  
-         						 		   <li>
-     	   						 				<a href="<?php echo $this->getUrl('customer/account/ create/')?>">  <?php echo $this->__('Sign up') ?></a>
-     	   						 		    </li>  
+         						 			<?php else: ?>
+
+										 <li>
+											 <a href="<?php echo Mage::getUrl('customer/account/create/')?>">  <?php echo $this->__('Sign up') ?></a>
+										 </li>
+
+										 <li >
+											 <?php echo $this->getChildHtml('header_customer_form_mini_login') ?>
+
+     	   						 		    </li>
      	   						 				
-        	  					 			<li>
-        	   								<a href="<?php echo $this->getUrl('customer/account/ login/')?>"> <?php echo $this->__('Login') ?></a>
-     	    								</li>     
+
      	   						 			
      	   						 		   <?php endif; ?>  
      	   					</ul>  
@@ -63,7 +67,7 @@
      	</div> 
      	
      	<div class="row" >
-     	  	<div class="col-md-4 vcenter" >
+     	  	<div class="col-md-4 vbottom" >
      	  		<div class="logobox">
 					<?php if ($this->getIsHomePage()):?>
         			<h1 >
@@ -74,13 +78,13 @@
        			 	<?php endif ?>
        		</div>
        		</div>
-       		<div class="col-md-5 vcenter" >
+       		<div class="col-md-5 vbottom" >
        			<div class="searchbox">
        		 <?php echo $this->getChildHtml('topSearch') ?>
        		</div>
        		</div>
        		
-       		<div class="col-md-2 vcenter" >
+       		<div class="col-md-2 vbottom" >
        			<div class="cartbox">
        			<?php $_cartQty = $this -> getSummaryCount();
 				if (empty($_cartQty)) {

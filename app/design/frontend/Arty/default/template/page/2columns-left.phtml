@@ -43,11 +43,12 @@
         <div class="after-header">
             <div class="container">
                 <?php echo $this->getChildHtml('breadcrumbs') ?>
+                <div class="col-left sidebar  col-md-3"><?php echo $this->getChildHtml('left') ?></div>
                 <div class="col-main  col-md-9">
                     <?php echo $this->getChildHtml('global_messages') ?>
                     <?php echo $this->getChildHtml('content') ?>
                 </div>
-                <div class="col-left sidebar  col-md-3"><?php echo $this->getChildHtml('left') ?></div>
+
             </div>
         </div>
         <?php echo $this->getChildHtml('footer') ?>
