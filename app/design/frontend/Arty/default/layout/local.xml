@@ -4,6 +4,10 @@
     <default translate="label" module="page">
         <reference name="head">
             <!-- Adding Javascripts -->
+            <action method="addJs">
+                <type>skin_js</type>
+                <name>js/login-box.js</name>
+            </action>
             <action method="addItem">
                 <type>skin_js</type>
                 <name>js/jquery.min.js</name>
@@ -78,77 +82,9 @@
                 </block>
             </reference>
 
-            <reference name="footer">
-                <remove name="footer_links"/>
-                <remove name="footer_links2"/>
-
-                <block type="cms/block" name="footer-cmsLinks" as="footer-cmsLinks">
-                    <action method="setBlockId">
-                        <block_id>footer-cmsLinks</block_id>
-                    </action>
-                </block>
-                <block type="cms/block" name="footer-artycart" as="footer-artycart">
-                    <action method="setBlockId">
-                        <block_id>footer-artycart</block_id>
-                    </action>
-                </block>
-                <block type="cms/block" name="footer-social" as="footer-social">
-                    <action method="setBlockId">
-                        <block_id>footer-social</block_id>
-                    </action>
-                </block>
-                <block type="cms/block" name="footer-paymnet" as="footer-paymnet">
-                    <action method="setBlockId">
-                        <block_id>footer-paymnet</block_id>
-                    </action>
-                </block>
-            </reference>
-
-            <checkout_cart_index translate="label">
-                <reference name="checkout.cart">
-                    <action method="setCartTemplate">
-                        <value>checkout/cart.phtml</value>
-                    </action>
-                    <action method="addItemRender">
-                        <type>simple</type>
-                        <block>checkout/cart_item_renderer</block>
-                        <template>checkout/cart/item/default.phtml</template>
-                    </action>
-                    <action method="addItemRender">
-                        <type>grouped</type>
-                        <block>checkout/cart_item_renderer_grouped</block>
-                        <template>checkout/cart/item/default.phtml</template>
-                    </action>
-                    <action method="addItemRender">
-                        <type>configurable</type>
-                        <block>checkout/cart_item_renderer_configurable</block>
-                        <template>checkout/cart/item/default.phtml</template>
-                    </action>
-
-                </reference>
-
-            </checkout_cart_index>
-            <reference name="content">
 
 
-            </reference>
-            <catalog_product_view translate="label">
-                <reference name="content">
-                    <block type="catalog/product_view" name="product.info.addtocart" as="addtocart"
-                           template="catalog/product/view/addtocart.phtml"/>
-                </reference>
-            </catalog_product_view>
-            <PRODUCT_TYPE_configurable translate="label" module="catalog">
-                <reference name="product.info.options.wrapper">
-                    <block type="catalog/product_view_type_configurable" name="product.info.options.configurable"
-                           as="options_configurable" before="-"
-                           template="catalog/product/view/type/options/configurable.phtml">
-                        <block type="core/text_list" name="product.info.options.configurable.renderers"
-                               as="attr_renderers"/>
-                        <block type="core/text_list" name="product.info.options.configurable.after" as="after"/>
-                    </block>
-                </reference>
-            </PRODUCT_TYPE_configurable>
+
             <!--	<reference name="footer">
                 <block type="cms/block" name="footer-company" as="footer-company">
                     <action method="setBlockId">
@@ -173,6 +109,18 @@
             </reference>-->
 
 
+
+
+        </reference>
+
+        <reference name="content">
+
+
+        </reference>
+        <reference name="footer">
+            <remove name="footer_links"/>
+            <remove name="footer_links2"/>
+
             <block type="cms/block" name="footer-cmsLinks" as="footer-cmsLinks">
                 <action method="setBlockId">
                     <block_id>footer-cmsLinks</block_id>
@@ -193,9 +141,29 @@
                     <block_id>footer-paymnet</block_id>
                 </action>
             </block>
-
-
         </reference>
+     <!--   <block type="cms/block" name="footer-cmsLinks" as="footer-cmsLinks">
+            <action method="setBlockId">
+                <block_id>footer-cmsLinks</block_id>
+            </action>
+        </block>
+        <block type="cms/block" name="footer-artycart" as="footer-artycart">
+            <action method="setBlockId">
+                <block_id>footer-artycart</block_id>
+            </action>
+        </block>
+        <block type="cms/block" name="footer-social" as="footer-social">
+            <action method="setBlockId">
+                <block_id>footer-social</block_id>
+            </action>
+        </block>
+        <block type="cms/block" name="footer-paymnet" as="footer-paymnet">
+            <action method="setBlockId">
+                <block_id>footer-paymnet</block_id>
+            </action>
+        </block> -->
+
+
 
         <!--	<reference name="footer">
             <block type="cms/block" name="footer-company" as="footer-company">
@@ -221,6 +189,47 @@
         </reference>-->
 
     </default>
+    <catalog_product_view translate="label">
+        <reference name="content">
+            <block type="catalog/product_view" name="product.info.addtocart" as="addtocart"
+                   template="catalog/product/view/addtocart.phtml"/>
+        </reference>
+    </catalog_product_view>
+    <PRODUCT_TYPE_configurable translate="label" module="catalog">
+        <reference name="product.info.options.wrapper">
+            <block type="catalog/product_view_type_configurable" name="product.info.options.configurable"
+                   as="options_configurable" before="-"
+                   template="catalog/product/view/type/options/configurable.phtml">
+                <block type="core/text_list" name="product.info.options.configurable.renderers"
+                       as="attr_renderers"/>
+                <block type="core/text_list" name="product.info.options.configurable.after" as="after"/>
+            </block>
+        </reference>
+    </PRODUCT_TYPE_configurable>
+    <checkout_cart_index translate="label">
+        <reference name="checkout.cart">
+            <action method="setCartTemplate">
+                <value>checkout/cart.phtml</value>
+            </action>
+            <action method="addItemRender">
+                <type>simple</type>
+                <block>checkout/cart_item_renderer</block>
+                <template>checkout/cart/item/default.phtml</template>
+            </action>
+            <action method="addItemRender">
+                <type>grouped</type>
+                <block>checkout/cart_item_renderer_grouped</block>
+                <template>checkout/cart/item/default.phtml</template>
+            </action>
+            <action method="addItemRender">
+                <type>configurable</type>
+                <block>checkout/cart_item_renderer_configurable</block>
+                <template>checkout/cart/item/default.phtml</template>
+            </action>
+
+        </reference>
+
+    </checkout_cart_index>
     <customer_logged_out>
         <reference name="header">
             <block type="customer/form_login" name="header_customer_form_mini_login"
