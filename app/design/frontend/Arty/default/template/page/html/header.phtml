@@ -87,10 +87,9 @@
 
             <div class="col-md-2 vbottom" >
                 <div class="cartbox">
-                    <?php $_cartQty = $this -> getSummaryCount();
-                    if (empty($_cartQty)) {
-                        $_cartQty = 0;
-                    }
+                    <?php
+                    $_cartQty = Mage::getSingleton('checkout/cart')->getItemsCount();
+                  //  echo $_cartQty;
                     ?>
                     <a href="<?php echo $this -> helper('checkout/cart') -> getCartUrl(); ?>" data-target-element="#header-cart" class="skip-link skip-cart <?php if($_cartQty <= 0): ?> no-count<?php endif; ?>">
                         <span ><img src="<?php echo $this->getSkinUrl('images/artcrt.png') ?>" /></span>

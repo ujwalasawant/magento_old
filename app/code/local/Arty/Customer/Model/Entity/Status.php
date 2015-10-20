@@ -24,7 +24,6 @@ class Arty_Customer_Model_Entity_Status extends Mage_Eav_Model_Entity_Attribute_
                 'label' => 'Single'
             );
 
-
         }
 
         return $this->_options;

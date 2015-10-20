@@ -128,7 +128,7 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
     <?php else: ?>
         <!-- 3rd column -->
         <div class="col-lg-2 product-cart-actions vcenter text-center" >
-            <input  type="text"  name="cart[<?php echo $_item->getId() ?>][qty]" value="<?php echo $this->getQty() ?>" size="3" title="<?php echo $this->__('Qty') ?>" class="input-text qty" maxlength="12" />
+            <input type="text"  name="cart[<?php echo $_item->getId() ?>][qty]" value="<?php echo $this->getQty() ?>" size="3" title="<?php echo $this->__('Qty') ?>" class="input-text qty" maxlength="12" />
 
             <button type="submit" name="update_cart_action" value="update_qty" title="<?php echo $this->__('Update'); ?>" class="button btn-update"><span><span><?php echo $this->__('Update'); ?></span></span>
             </button>
@@ -230,7 +230,23 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
     <!--Sub total starts here -->
     <!-- 5th column -->
     <div class="col-lg-1 col-lg-offset-1 vcenter" >
-      <?php echo Mage::getSingleton('checkout/session')->getQuote()->getShippingAddress()->setShippingDescription() ?>
+        <?php
+        $custom = Mage::getModel('catalog/product')->load($_item->getProductId());
+        echo $custom->getSku();
+        ?>
+       <?php echo
+       $product = Mage::getModel('catalog/product')->load($_item->getEntityId());
+       $product->getDescription();
+
+
+
+       $salesQuoteRate = Mage::getModel('sales/quote_address_rate')->load($_id);
+
+        if($salesQuoteRate){
+        echo '<br/>CODE : '.$salesQuoteRate->getCode();
+        echo '<br/>METHOD : '.$salesQuoteRate->getMethod();
+        }
+?>
     </div>
     <!-- 6th column -->
     <?php if (($this->helper('tax')->displayCartPriceExclTax() || $this->helper('tax')->displayCartBothPrices()) && !$_item->getNoSubtotal()): ?>
