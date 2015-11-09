@@ -708,3 +708,68 @@ border: none !important;
 .borderless tbody tr td, .borderless tbody tr th, .borderless thead tr th {
   border: none;
 }
+
+/* nav - container*/
+.nav-container {
+  background: white;
+}
+
+.f-nav {
+  z-index: 9999;
+  position: fixed;
+  left: 120px;
+  right: 140px;
+  top: 0;
+}
+
+.nav {
+  height: 42px;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav ul li {
+  float: left;
+  margin-top: 6px;
+  padding: 6px;
+  border-right: 1px solid #ACACAC;
+}
+
+.nav ul li:first-child {
+  padding-left: 0;
+}
+
+.nav ul li a {
+}
+
+.nav ul li a:hover {
+  text-decoration: none;
+}
+
+/** header scroll
+#header_nav {
+  width:100%;
+  height:100px;
+  background-color:#666;
+  position:fixed;
+  top:0;
+  left:0;
+} **/
+
+/**  address book css **/
+.textbx
+{
+  border : solid;
+  border-width: 1px;
+  border-color: orange;
+}
+
+.btnbg
+{
+  background-color: navajowhite;
+}
+
+
+
