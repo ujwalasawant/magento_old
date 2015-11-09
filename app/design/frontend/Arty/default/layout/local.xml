@@ -229,7 +229,14 @@
 
         </block>
     </customer_account>
+    <catalog_category_layered>
+        <reference name="content">
+            <block type="catalog/product_list" name="product_list" template="catalog/product/list.phtml">
 
+            </block>
+        </reference>
+
+    </catalog_category_layered>
 
 
 
