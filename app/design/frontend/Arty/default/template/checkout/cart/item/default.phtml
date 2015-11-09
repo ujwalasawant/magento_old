@@ -230,7 +230,11 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
     <!--Sub total starts here -->
     <!-- 5th column -->
     <div class="col-lg-1 col-lg-offset-1 vcenter" >
-      <?php echo Mage::getSingleton('checkout/session')->getQuote()->getShippingAddress()->setShippingDescription() ?>
+        <?php
+        echo Mage::getSingleton('checkout/session')->getQuote()->getShippingAddress()->getShippingAmount();
+        ?>
+
+        <?php echo Mage::getSingleton('checkout/session')->getQuote()->getShippingAddress()->setShippingDescription() ?>
     </div>
     <!-- 6th column -->
     <?php if (($this->helper('tax')->displayCartPriceExclTax() || $this->helper('tax')->displayCartBothPrices()) && !$_item->getNoSubtotal()): ?>
