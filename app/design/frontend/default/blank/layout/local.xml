@@ -7,7 +7,7 @@
         <reference name="head">
             <!-- Adding Javascripts -->
 
-            <action method="addItem">
+            <action method="addJs">
                 <type>skin_js</type>
                 <name>js/login-box.js</name>
             </action>
@@ -23,22 +23,12 @@
                 <type>skin_js</type>
                 <name>js/jquery.scripts.js</name>
             </action>
-            <action method="addItem">
-                <type>skin_js</type>
-                <name>js/app.js</name>
-            </action>
 
 
-            <action method="addItem">
-                <type>skin_js</type>
-                <name>js/jquery-1.8.3.min.js</name>
-            </action>
-            <action method="addItem">
-                <type>skin_js</type>
-                <name>js/jquery.elevatezoom.js</name>
-            </action>
             <!--Masonry Effect		-->
-            <action method="addItem">
+
+
+            <action method="addJs">
                 <type>skin_js</type>
                 <name>js/blocksit.min.js</name>
             </action>
@@ -46,6 +36,9 @@
                 <type>skin_js</type>
                 <name>js/Mansoory.js</name>
             </action>
+
+
+
             <action method="addItem">
                 <type>skin_js</type>
                 <name>js/html5shiv.js</name>
@@ -73,8 +66,6 @@
                 <type>skin_css</type>
                 <stylesheet>css/styles.css</stylesheet>
             </action>
-
-
         </reference>
         <reference name="header">
             <block type="cms/block" name="topbar_cmslinks" as="topbar_cmslinks">
